@@ -52,7 +52,12 @@ const Input: React.FC<InputProps> = ({
 
   return (
     // !!error => Se tem um erro fica true, se não fica false
-    <Container style={containerStyle} isErrored={!!error}isFilled={isFilled} isFocused={IsFocused}>
+    <Container
+      style={containerStyle}
+      isErrored={!!error}isFilled={isFilled}
+      isFocused={IsFocused}
+      data-testid="input-container"
+    >
       {Icon && <Icon size={20} />}
       <input defaultValue={defaultValue}
              ref={inputRef}
